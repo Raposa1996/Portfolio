@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navList = document.getElementById("nav-items");
     const nav = document.querySelector('nav');
 
-    // Dados do menu de navegação
+  
  
     // Função para adicionar itens ao menu de navegação
     function addNavItems(items) {
