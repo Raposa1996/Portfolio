@@ -1,87 +1,112 @@
+
+
+/* Corpo da página com imagem de fundo */
 body {
     background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEhqzeTOTJm2J-wrSe9kAj3DlAphY5RzFw3W4xf25OPT1AEktfD1Z70sYBclrMDeuD6jAeZzJPByXgH272iG3hxS7AGppznCwS1yzioR77m4J03rVdFLmL3TtLjVmUfaCk-p1D3Jdkj6fp-9U64Tnqg1EMKT9OXpclfVjKrYeqT-OJWdnq9JBh_8ZZKWpsM=w1200-h675-p-k-no-nu');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    color: white;
+    background-size: cover; /* A imagem cobre toda a área disponível */
+    background-position: center center; /* Posiciona a imagem no centro */
+    background-repeat: no-repeat; /* Garante que a imagem não se repita */
+    width: 100%; /* Garante que a largura seja de 100% */
+    color: white; /* Define a cor do texto como branco */
+    font-family: 'Arial', sans-serif; /* Define a fonte */
+    min-height: 100%; /* Garante que o body cubra pelo menos toda a altura da tela */
 }
+
+/* Garantir que a seção principal do conteúdo ocupe a tela */
+.main-content {
+    min-height: 100vh; /* Garante que o conteúdo ocupe pelo menos toda a altura da tela */
+    padding: 20px;
+    text-align: center;
+}
+.navbar-nav .nav-link {
+    text-decoration: none; /* Remove o sublinhado de todos os links */
+}
+
+.navbar-nav .nav-link.active {
+    text-decoration: none !important; /* Remove o sublinhado especificamente para o link ativo */
+}
+
+
+
+/* Navbar */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgb(27, 24, 24);
+    background-color: rgba(27, 24, 24, 0.315);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px 30px;
 }
-nav img {
-    height: 70px;
+
+/* Efeito ao rolar a página */
+nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+.navbar-nav .nav-link {
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+    border-radius: 14px;
+}
+
+.navbar-nav .nav-link:hover {
+    box-shadow: 0 4px 8px rgba(32, 243, 85, 0.5); /* Sombra verde suave */
+    color: #20f355; /* Verde brilhante no texto */
+    transform: translateY(-2px); /* Elevação leve */
+}
+
+
+/* Estilo dos links da navegação */
 .navbar-brand, .nav-link {
     color: white !important;
-}
-.content {
-    padding-top: 80px;
-    text-align: center;
-}
-.content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-.about-image {
-    max-width: 80%;
-    height: auto;
-    object-fit: cover;
-    margin-left: 20px;
-}
-.hover-effect {
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.hover-effect:hover {
-    color: #0400ff; /* Altere para a cor desejada */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona um leve sombreado */
-    text-decoration: underline; /* Sublinha o texto */
-}
-
-.navbar {
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.navbar-toggler-icon {
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 30 30\'%3E%3Cpath stroke=\'rgba%28255, 255, 255, 0.5%29\' stroke-width=\'2\' d=\'M4 7h22M4 15h22M4 23h22\'/%3E%3C/svg%3E');
-}
-.image-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#interactive-image {
-    width: 100%;
-    max-width: 300px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-#interactive-image:hover {
-    transform: scale(1.1); /* Zoom leve no hover */
-    opacity: 0.8; /* Transparência ao passar o mouse */
-}
-#interactive-text {
+    font-weight: 500;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-#interactive-text:hover {
+.nav-link:hover {
     color: #20f355;
-    transform: scale(1.05);
+    background-color: rgba(32, 243, 85, 0.1);
+    transform: translateY(-5px);
+    text-decoration: none;
 }
 
+/* Dropdown interativo */
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-item.dropdown .dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 10px 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+}
+
+.dropdown-item {
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #20f355;
+    color: black;
+}
+
+/* Seção com interatividade de imagem */
 .image-container {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .hover-message {
@@ -91,21 +116,303 @@ nav img {
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 10px;
+    padding: 15px;
     border-radius: 8px;
     display: none;
     font-size: 16px;
 }
 
-.image-container:hover #hover-message {
+.image-container:hover .hover-message {
     display: block;
 }
 
-#interactive-image {
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.image-container:hover #interactive-image {
+.image-container:hover img {
     transform: scale(1.1);
     filter: brightness(0.8);
+}
+
+/* Cards interativos */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card i {
+    color: #12d33c;
+}
+
+.card:nth-child(2) i {
+    color: #2965f1;
+}
+
+.card:nth-child(3) i {
+    color: #f7df1e;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Seção de Skills */
+#skills {
+    background: url('https://s.zst.com.br/cms-assets/2021/03/shutterstock_659430700-1-.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 50px 0;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+#skills::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    z-index: -1;
+}
+.image-container img {
+    width: 100%; /* Mantém a imagem responsiva */
+    max-width: 300px; /* Limita a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+.image-container {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto; /* Centraliza a imagem dentro da coluna */
+}
+
+.hover-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: none; /* Oculta a mensagem por padrão */
+    font-size: 16px;
+}
+
+.image-container:hover .hover-message {
+    display: block; /* Exibe a mensagem ao passar o mouse */
+}
+
+.image-container:hover img {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    transition: transform 0.3s ease;
+}
+#home {
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 80px; /* Ajuste caso tenha uma navbar fixa */
+}
+
+#home h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#home h1:hover {
+    color: #32cd32; /* Verde brilhante ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom no título */
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#home p:hover {
+    color: #32cd32; /* Verde brilhante no subtítulo */
+    transform: translateY(-10px); /* Efeito de elevação no subtítulo */
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home h1, #home p {
+    animation: fadeIn 1s ease-in-out;
+}
+#about-section p.lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#about-section p.lead:hover {
+    color: #32cd32; /* Verde brilhante ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de elevação */
+}
+
+/* Animação de entrada para o texto */
+#about-section p.lead {
+    animation: fadeIn 1s ease-in-out;
+}
+.    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.card i {
+    color: #12d33c;
+}
+
+.card:nth-child(2) i {
+    color: #2965f1;
+}
+
+.card:nth-child(3) i {
+    color: #f7df1e;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#skills {
+    background: url('https://s.zst.com.br/cms-assets/2021/03/shutterstock_659430700-1-.jpg') no-repeat center center; /* Substitua pela URL da sua imagem */
+    background-size: cover;
+    color: #fff;
+    padding: 50px 0;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+#skills::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Adiciona uma sobreposição escura */
+    border-radius: 10px;
+    z-index: -1;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #32cd32; /* Cor vibrante para o título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no título */
+}
+
+.contact-text {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.contact-text a {
+    color: #20f355;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-text a:hover {
+    color: #0d8b2d;
+    transform: scale(1.1);
+    text-shadow: 0 0 8px rgba(32, 243, 85, 0.7); /* Brilho no hover */
+}
+
+/* Estilo para ícones sociais */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #20f355;
+    transform: translateY(-5px) scale(1.2); /* Elevação e zoom */
+}
+
+.social-link i {
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover i {
+    transform: rotate(360deg); /* Animação de rotação no hover */
+}
+/* Navbar estilização e interatividade */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilização de links da navbar */
+.navbar-brand {
+    color: #f5f5f5;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #20f355;
+}
+
+.nav-link {
+    color: #d3d3d3;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: #20f355;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+/* Navbar ao rolar a página */
+.navbar.scrolled .nav-link {
+    color: #f5f5f5;
+}
+
+.navbar.scrolled .navbar-brand {
+    color: #20f355;
 }
