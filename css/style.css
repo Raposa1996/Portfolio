@@ -76,7 +76,7 @@ nav.scrolled {
 
 /* Estilo dos links da navegação */
 
-.navbar-brand,
+
 .nav-link {
     color: white !important;
     font-weight: 500;
@@ -125,13 +125,6 @@ nav.scrolled {
 }
 
 
-/* Seção com interatividade de imagem */
-
-.image-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
 
 .hover-message {
     position: absolute;
@@ -502,4 +495,14 @@ nav.scrolled {
 
 .navbar.scrolled .navbar-brand {
     color: #20f355;
+}
+/* Pagina projetos */
+.card-custom {
+    height: 200px; /* ou qualquer altura desejada */
+    padding: 30px; /* aumenta o espaço interno */
+}
+
+.card-custom img {
+    height: 200px; /* Tamanho da imagem */
+    object-fit: cover;
 }
