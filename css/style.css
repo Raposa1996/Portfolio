@@ -16,6 +16,7 @@ body {
     /* Define a fonte */
     min-height: 100%;
     /* Garante que o body cubra pelo menos toda a altura da tela */
+    background-size: cover;
 }
 
 
@@ -506,3 +507,4 @@ nav.scrolled {
     height: 200px; /* Tamanho da imagem */
     object-fit: cover;
 }
+
