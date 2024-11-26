@@ -13,15 +13,15 @@
 </head>
 
 <style>
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Previne scroll horizontal */
-}
-
-    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        /* Previne scroll horizontal */
+    }
 </style>
 
 <body>
@@ -56,78 +56,110 @@ html, body {
     </nav>
 
     <!-- Seção Projetos -->
-    <div id="projects" class="container my-5 ms-auto "></div>
-        <h2 class="text-center" data-aos="fade-up">Meus Projetos</h2>
-        <div class="row justify-content-center">
-            <!-- Card de Projetos -->
-            <!-- Card de Projeto -->
-            <!-- Card de Projeto com largura aumentada -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                <div class="card shadow-sm" style="height: 100%; padding: 10px;">
-                    <img src="./img/lista.PNG" class="card-img-top" alt="Projeto 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Lista de Tarefas</h5>
-                        <p class="card-text">
-                            Este aplicativo permite que os usuários adicionem, removam e marquem tarefas como
-                            concluídas. Desenvolvido com HTML, CSS e JavaScript, o projeto visa reforçar a manipulação
-                            do DOM e o tratamento de eventos. Ideal para praticar como criar interações dinâmicas em uma
-                            página web.
-                        </p>
-                        <a href="https://github.com/Raposa1996/ListaTarefas" class="btn btn-success" target="_blank"
-                            data-aos="zoom-in" data-aos-duration="1000">Ver no GitHub</a>
+    <div class="container my-5" id="projects">
+        <!-- Card 1: Lista de Tarefas -->
+        <div class="row align-items-center mb-4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-md-6">
+                <h3>Lista de Tarefas</h3>
+                <p>
+                    Este aplicativo permite que os usuários adicionem, removam e marquem tarefas como concluídas.
+                    Desenvolvido com HTML, CSS e JavaScript, o projeto visa reforçar a manipulação do DOM e o tratamento
+                    de eventos.
+                </p>
+                <a href="https://github.com/Raposa1996/ListaTarefas" class="btn btn-success" target="_blank">
+                    Ver no GitHub
+                </a>
+            </div>
+            <div class="col-md-6">
+                <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/lista.PNG" class="d-block w-100" alt="Lista de Tarefas">
+                        </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
-
-
-            <!-- Card de Projetos -->
-            <!-- Card de Projeto -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                <div class="card shadow-sm" style="height: 100%; padding: 10px;">
-                    <img src="./img/jogo.PNG"" class=" card-img-top" alt="Projeto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Jogo de Memória com Cartas</h5>
-                        <p class="card-text">
-                            Um jogo simples de memória onde o objetivo é virar cartas e parear pares correspondentes.
-                            Desenvolvido com HTML, CSS e JavaScript, este projeto tem como objetivo praticar manipulação
-                            do DOM, uso de arrays e o tratamento de eventos para criar uma lógica básica de jogo.
-                        </p>
-                        <a href="https://github.com/Raposa1996/JogoDaMemoria" class="btn btn-success" target="_blank"
-                            data-aos="zoom-in" data-aos-duration="1000">Ver no GitHub</a>
+        </div>
+    
+        <!-- Card 2: Jogo de Memória -->
+        <div class="row align-items-center mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="col-md-6">
+                <h3>Jogo de Memória</h3>
+                <p>
+                    Um jogo simples de memória onde o objetivo é virar cartas e parear pares correspondentes.
+                    Desenvolvido com HTML, CSS e JavaScript.
+                </p>
+                <a href="https://github.com/Raposa1996/JogoDaMemoria" class="btn btn-success" target="_blank">
+                    Ver no GitHub
+                </a>
+            </div>
+            <div class="col-md-6">
+                <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/jogo.PNG" class="d-block w-100" alt="Jogo de Memória">
+                        </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
-
-            <!-- Card de Projetos -->
-            <!-- Card de Projeto -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                <div class="card shadow-sm" style="height: 100%; padding: 10px;">
-                    <img src="./img/clima.PNG" class="card-img-top" alt="Projeto 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Painel de Clima</h5>
-                        <p class="card-text">
-                            Um painel interativo que exibe dados meteorológicos de uma cidade em tempo real.
-                            Desenvolvido com HTML, CSS e JavaScript, este projeto utiliza a Fetch API para buscar dados
-                            de clima em uma API pública e exibi-los de maneira dinâmica e responsiva.
-                        </p>
-                        <a href="https://github.com/Raposa1996/PainelClima" class="btn btn-success" target="_blank"
-                            data-aos="zoom-in" data-aos-duration="1000">Ver no GitHub</a>
+        </div>
+    
+        <!-- Card 3: Painel Clima -->
+        <div class="row align-items-center mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <div class="col-md-6">
+                <h3>Painel Clima</h3>
+                <p>
+                    Um painel interativo que exibe dados meteorológicos de uma cidade em tempo real.
+                    Desenvolvido com HTML, CSS e JavaScript, este projeto utiliza a Fetch API para buscar dados
+                    de clima em uma API pública e exibi-los de maneira dinâmica e responsiva.
+                </p>
+                <a href="https://github.com/Raposa1996/PainelClima" class="btn btn-success" target="_blank">
+                    Ver no GitHub
+                </a>
+            </div>
+            <div class="col-md-6">
+                <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/clima.PNG" class="d-block w-100" alt="Painel Clima">
+                        </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
+        </div>
+    </div>
+    
 
 
-            <!-- Scripts -->
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-                crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-                integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-                crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-            <script>
-                AOS.init(); // Inicializa o AOS
-            </script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
