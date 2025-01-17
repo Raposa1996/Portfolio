@@ -1,22 +1,17 @@
 /* Corpo da página com imagem de fundo */
 
 body {
-    background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEhqzeTOTJm2J-wrSe9kAj3DlAphY5RzFw3W4xf25OPT1AEktfD1Z70sYBclrMDeuD6jAeZzJPByXgH272iG3hxS7AGppznCwS1yzioR77m4J03rVdFLmL3TtLjVmUfaCk-p1D3Jdkj6fp-9U64Tnqg1EMKT9OXpclfVjKrYeqT-OJWdnq9JBh_8ZZKWpsM=w1200-h675-p-k-no-nu');
-    background-size: cover;
-    /* A imagem cobre toda a área disponível */
-    background-position: center center;
-    /* Posiciona a imagem no centro */
-    background-repeat: no-repeat;
-    /* Garante que a imagem não se repita */
-    width: 100%;
-    /* Garante que a largura seja de 100% */
-    color: white;
-    /* Define a cor do texto como branco */
-    font-family: 'Arial', sans-serif;
-    /* Define a fonte */
-    min-height: 100%;
-    /* Garante que o body cubra pelo menos toda a altura da tela */
-    background-size: cover;
+    background-image: url('https://wallpapers.com/images/hd/4k-space-background-wwkr15sweo1i06q4.jpg');
+    background-size: cover; /* Faz com que a imagem cubra toda a área */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Garante que a imagem não se repita */
+    background-attachment: fixed; /* Fixa a imagem durante o scroll */
+    image-rendering: -webkit-optimize-contrast; /* Melhora a renderização em navegadores baseados em WebKit */
+    image-rendering: crisp-edges; /* Nitidez em navegadores suportados */
+    width: 100%; /* Faz o body ocupar 100% da largura */
+    color: white; /* Define a cor do texto */
+    font-family: 'Arial', sans-serif; /* Define a fonte */
+    min-height: 100%; /* Garante que o body ocupe 100% da altura */
 }
 
 
@@ -259,10 +254,14 @@ nav.scrolled {
     /* Para a animação suave de zoom */
 }
 
-.image-container:hover img {
-    transform: scale(1.1);
-    /* Aumenta a imagem em 10% quando o mouse passa por cima */
+.image-container img {
+    width: 100%; /* Mantém a imagem responsiva */
+    max-width: 500px; /* Aumenta o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
 }
+
 
 .hover-message {
     position: absolute;
