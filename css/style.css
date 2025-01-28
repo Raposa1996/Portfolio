@@ -1,5 +1,8 @@
 /* Corpo da página com imagem de fundo */
-
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     background-image: url('https://wallpapers.com/images/hd/4k-space-background-wwkr15sweo1i06q4.jpg');
     background-size: cover; /* Faz com que a imagem cubra toda a área */
@@ -11,7 +14,8 @@ body {
     width: 100%; /* Faz o body ocupar 100% da largura */
     color: white; /* Define a cor do texto */
     font-family: 'Arial', sans-serif; /* Define a fonte */
-    min-height: 100%; /* Garante que o body ocupe 100% da altura */
+    max-height: 100%; /* Garante que o body ocupe 100% da altura */
+    max-width: 100%;
 }
 
 
