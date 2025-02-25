@@ -1,5 +1,5 @@
 # 💫 About Me:
-Olá muito prazer! Meu nome é Higor e tenho 28 anos e estou em transição de carreira, atualmente me dedicando ao estudo e desenvolvimento na área de Análise e Desenvolvimento de Sistemas. Minha paixão por tecnologia e resolução de problemas me motiva a criar soluções eficientes e inovadoras. Com experiência prática em HTML5, JavaScript, CSS, C#, Angular e ReactJs, busco constantemente aprimorar minhas habilidades e contribuir para projetos que façam a diferença.
+Olá muito prazer! Meu nome é Higor e tenho 28 anos e estou em transição de carreira, atualmente me dedicando ao estudo e desenvolvimento na área de Engenharia da Computação. Minha paixão por tecnologia e resolução de problemas me motiva a criar soluções eficientes e inovadoras. Com experiência prática em HTML5, JavaScript, CSS, C#, Angular e ReactJs, busco constantemente aprimorar minhas habilidades e contribuir para projetos que façam a diferença.
 
 
 # 💻 Tech Stack:
